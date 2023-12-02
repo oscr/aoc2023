@@ -12,7 +12,7 @@ toDigits = {
     "nine": "9"
 }
 
-lines = open('input.txt', 'r').read().split('\n')
+lines = open('../input.txt', 'r').read().split('\n')
 digitsAndWords = [ re.findall(r"(?=(\d|one|two|three|four|five|six|seven|eight|nine))", line) for line in lines]
 digits = [[d if d not in toDigits else toDigits[d] for d in line] for line in digitsAndWords]
 calibratedValues = [int("{}{}".format(line[0], line[-1])) for line in digits if line != []]

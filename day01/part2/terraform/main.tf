@@ -1,5 +1,5 @@
 variable "filename" {
-  default = "input.txt"
+  default = "../input.txt"
 }
 
 locals {
