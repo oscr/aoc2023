@@ -68,5 +68,9 @@ for row in range(len(schematic)):
     for match in gears.finditer(schematic[row]):
         solution_part2 += is_gear(row, match.start())
 
+
+assert solution_part1 == 536576
+assert solution_part2 == 467835
+
 print("part 1: ", solution_part1)
 print("part 2: ", solution_part2)
